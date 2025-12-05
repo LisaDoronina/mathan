@@ -10,6 +10,12 @@ pwd, cd, mkdir, ls, cat, cp, stat, file, find, alias, bashrc, git, wc, grep, who
 - Создать структуру папок `projects/website/logs` одной командой
 - Проверить, что структура создана
 
+1) pwd
+2) cd
+3) mkdir -p projects/website/logs
+4) ls
+5) ls -R projects
+
 ---
 
 ### Вопрос 2
