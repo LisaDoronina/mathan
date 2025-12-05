@@ -13,18 +13,27 @@ pwd, cd, mkdir, ls, cat, cp, stat, file, find, alias, bashrc, git, wc, grep, who
 1) pwd
 2) cd
 3) mkdir -p projects/website/logs
-4) ls
-5) ls -R projects
+4) find projects/website/logs (if exists, it shows this directory, else "No such file or directory")
 
 ---
 
 ### Вопрос 2
 В директории `/var/log` нужно найти все файлы логов за последние 7 дней, которые больше 10MB. Составьте команду `find` с необходимыми опциями.
 
+1) find /var/log -type f -name "*.log" -mtime -7 -size +10M
+
+   f - file
+   mtime - менее семи дней изменены
+   размер больше 10 мегабайт
+
 ---
 
 ### Вопрос 3
 Создайте алиас `ll`, который показывает подробный список файлов включая скрытые. Как сделать так, чтобы этот алиас работал при каждом входе в систему?
+
+1) alias ll='ls -la'
+2) just launch in the terminal: ll
+3) 
 
 ---
 
