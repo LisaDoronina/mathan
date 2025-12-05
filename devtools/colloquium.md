@@ -31,14 +31,22 @@ pwd, cd, mkdir, ls, cat, cp, stat, file, find, alias, bashrc, git, wc, grep, who
 ### Вопрос 3
 Создайте алиас `ll`, который показывает подробный список файлов включая скрытые. Как сделать так, чтобы этот алиас работал при каждом входе в систему?
 
-1) alias ll='ls -la'
-2) just launch in the terminal: ll
-3) 
+1) alias ll='ls -la' (-l long fomat, -a all (including hidden files))
+2) just launch in the terminal: ll                 
+3) Чтобы алиас работал при каждом входе в систему, нужно добавить создание алиаса в конфигурационный файл оболочки.
+- echo "alias ll='ls -la'" >> ~/.bashrc 
 
 ---
 
 ### Вопрос 4
 Объясните концепцию stdin, stdout, stderr. Как перенаправить stderr в файл, а stdout вывести на экран? Как перенаправить убрать stderr из вывода команды?
+
+stdin - стандартный ввод cat < file.txt (используется для чтения из файла)
+stdout - стандартный вывод ls -l (выводит в консоль)
+stderr - стандартный вывод ошибок (в терминал по умолчанию) ls 'несуществующий_файл' выведет ошибку
+
+1) ls -l file1.txt file2.txt not_exist.txt 2> errors.log - чтобы перенаправить вывод ошибки в файл errors.log  (2 относится к stderr)
+2) ls -l file.txt 2> /dev/null
 
 ---
 
