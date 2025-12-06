@@ -127,6 +127,11 @@ git push origin --delete feature-login
 - Подсчитывает их количество
 - Сохраняет результат в файл `error_count.txt`
 
+```
+grep -c "ERROR" access.log > error_count.txt
+```
+-c count lines 
+
 ---
 
 ### Вопрос 9
@@ -143,6 +148,7 @@ cat app_users.txt | sort | uniq -c | sort -nr -k1 | head -10
 2. Оставит только строки, содержащие `.log`
 3. Отсортирует по имени
 4. Выведет первые 5 результатов
+   
 
 ---
 
