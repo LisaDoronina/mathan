@@ -90,6 +90,14 @@ cd /var/www - абсолютный путь
 - Сделайте коммит с сообщением
 - Посмотрите историю коммитов в одну строку
 
+
+  ```
+  git add index.html style.css
+  git status
+  git commit -m "HTML and CSS updated"
+  git log --oneline
+  ```
+
 ---
 
 ### Вопрос 7
