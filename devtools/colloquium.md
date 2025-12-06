@@ -108,6 +108,17 @@ hard link, symlink
 - Влить изменения из `feature-login` в `main`
 - Удалить ветку `feature-login` после успешного слияния
 
+```
+git checkout main
+git merge feature-login
+git branch -d feature-login
+```
+but if the branch was alreade pushed:
+```
+git push origin --delete feature-login
+```
+  
+
 ---
 
 ### Вопрос 8
