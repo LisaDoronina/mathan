@@ -182,6 +182,42 @@ head -5 первые пять результатов
 
 Приведите примеры использования каждого варианта.
 
+1) > перенаправление stdout (перезапись файла)
+2) >> дописывает в конец файла
+3) 2> перезаписывает файл ошибками, если есть
+4) &>  перенаправление stdout and stderr вместе (перезаписись файла)
+
+Пример 1:
+```
+ls -la > file.txt   //перезапись
+echo "Null" > file.txt //перезапись
+```
+
+Пример 2:
+
+```
+echo "$(date): today" >> file.txt     //Sat Dec  6 03:19:22 PM MSK 2025: today
+who >> file.txt //Sat Dec  6 03:19:22 PM MSK 2025: today
+```
+
+Пример 3:
+```
+grep "pattern" nonexistent.txt 2> errors.log
+// grep: nonexist.txt: No such file or directory
+
+rm /root/file 2> permission_errors.txt
+// rm: cannot remove '/root/file': Permission denied
+```
+
+Пример 4:
+```
+./script.sh &> output.log
+// Все сообщения скрипта (и обычные, и ошибки) в output.log
+
+make build &> build.log
+// Весь вывод компиляции в один лог-файл
+```
+
 ---
 
 ### Вопрос 12
