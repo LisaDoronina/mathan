@@ -261,6 +261,23 @@ root - группа-владелец
 - Никто кроме владельца не может изменять
 - Выводит имя пользователя, который запустил скрипт
 
+  ```
+  nano backup.sh
+  chmod 744 backup.sh
+  // если надо сделать владельцем себя: chown $USER:$USER backup.sh
+  ./backup.sh
+  ```
+
+  ```
+  #!/bin/bash
+
+   if [ ! -x "$0" ]; then  
+           echo "Error: you have not any permissions to this file"
+           exit 1
+   fi 
+
+   echo "The script was launched by: $(whoami)"
+   ```
 ---
 
 ### Вопрос 14
