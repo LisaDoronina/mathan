@@ -450,9 +450,21 @@ permission.txt                         50 bytes
 ### Вопрос 22
 Вы работаете инженером в крупной компании. Вам пришло уведомление (алерт), что на одном из ваших хостов остановлен сервис `nginx`:
 - Посмотрите статус сервиса
+```
+sudo systemctl status nginx 
+```
 - Запустите его, если он остановлен
+```
+sudo systemctl start nginx
+```
 - Добавьте его в автозагрузку через systemctl
+```
+sudo systemctl enable nginx
+```
 - Перезапустите сервис
+```
+sudo systemctl restart nginx
+```
 
 ---
 
