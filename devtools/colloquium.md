@@ -471,7 +471,13 @@ sudo systemctl restart nginx
 ### Вопрос 23
 Диск заполнен на 95%. Опишите последовательность команд для диагностики:
 - Как найти самые большие директории?
+```
+du -sh * | sort -hr                 # you can add "| head -10" to show the 10 biggest ones
+```
 - Как найти файлы больше 100MB?
+```
+find , -type f -size +100M
+```
 
 ---
 
