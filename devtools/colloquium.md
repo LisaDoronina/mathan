@@ -424,6 +424,27 @@ if [[ $filename = "test.txt" ]]; then
 ### Вопрос 21
 Напишите скрипт, который перебирает все `.txt` файлы в текущей директории и выводит размер каждого файла.
 
+```
+#!/bin/bash
+
+echo "Txt files sizes:"
+
+for file in *.txt; do
+        if [[ -f "$file" ]]; then
+                size=$(stat -c%s "$file" 2>/dev/null || wc -c < "$file" 2>/dev/null)
+                printf "%-30s %10d bytes\n" "$file" "$size"
+        fi
+done
+```
+
+OUTPUT:
+```
+Txt files sizes:
+error_count.txt                         2 bytes
+file.txt                              181 bytes
+permission.txt                         50 bytes
+```
+
 ---
 
 ### Вопрос 22
