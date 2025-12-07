@@ -505,3 +505,8 @@ ln file.txt link.txt
 ```
 ln -s file.txt link.txt
 ```
+3) Inode - номер файла в системе(вся информация о файле кроме имени и данных)
+```
+ls -i file.txt  #7131839 file.txt номер - и есть инод
+  
+```
